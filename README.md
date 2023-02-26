@@ -4,7 +4,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">About the project</a>
     </li>
     <li><a href="#usage">Usage</a>
     </li>
@@ -15,7 +15,7 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About the project
 
 In this work, we propose a knowledge-based system to evaluate the sustainability of SMEs in the fashion industry. The system is designed to evaluate sustainability across a range of indicators, including environmental impact, social responsibility, and economic viability. By using fuzzy logic, the system can accommodate the inherent uncertainty and subjectivity of sustainability metrics, enabling a more nuanced and accurate evaluation of a company's sustainability performance. The rules that guide the system were developed through an exhaustive review of scientific literature, ensuring that they are grounded in the best available knowledge on sustainability metrics and practices in the fashion industry.
 
