@@ -22,11 +22,10 @@
         <div class = "container">
             <div class = "row text-center"> 
                 <div class="col-12 "> <!-- ECONOMY COLUMN 1-->
-                    <div class ="row"> <!-- ROW 1 / IMAGE-->
+                    <div class ="row" id="first_section"> <!-- ROW 1 / IMAGE-->
                         <div class="col-4" id="img_eco">
-                            <div class="form-group"> 
-                                <img src="{{ url_for('static', filename='img/economy.png') }}" alt="economy" width="100" height="100">
-                            </div>
+                            <img src="{{ url_for('static', filename='/images/eco_1.png') }}" alt="economy" style="width: -webkit-fill-available; height: -webkit-fill-available;padding-bottom: 20px; padding-top: 20px">
+                            
                         </div>
                         <div class="col-6" id="text_eco">
 
@@ -40,7 +39,6 @@
                                 </tr>
                                 {% endfor %}
                             </div>
-        
         
                             <div class="form-group"> 
                                 <label> {{ form.labour_cost.label }}</label>
@@ -84,106 +82,115 @@
 
                         </div>
                     </div>
-                    
-                    
-
                 </div>
 
                 <div class="col-12"> <!-- ENVIRONMENT-->
-
-                    <div class="form-group"> 
-                        <label> {{ form.material_usage.label }}</label>
-                        {% for subfield in form.material_usage  %}
-                        <tr>
-                            <td>{{ subfield }}</td>
-                            <td>{{ subfield.label }}</td>
-                        </tr>
-                        {% endfor %}
+                    <div class ="row" id="second_section">
+                        <div class="col-4" id="img_env">
+                            <img src="{{ url_for('static', filename='/images/env.jpeg') }}" alt="enviromment" style="width: -webkit-fill-available; height: -webkit-fill-available;padding-bottom: 20px; padding-top: 20px">
+                          
+                        </div>
+                        <div class="col-6" id="text_env">
+                            <div class="form-group"> 
+                                <label> {{ form.material_usage.label }}</label>
+                                {% for subfield in form.material_usage  %}
+                                <tr>
+                                    <td>{{ subfield }}</td>
+                                    <td>{{ subfield.label }}</td>
+                                </tr>
+                                {% endfor %}
+                            </div>
+        
+                            <div class="form-group"> 
+                                <label> {{ form.recicled_used.label }}</label>
+                                {% for subfield in form.recicled_used   %}
+                                <tr>
+                                    <td>{{ subfield }}</td>
+                                    <td>{{ subfield.label }}</td>
+                                </tr>
+                                {% endfor %}
+                            </div>
+        
+                            <div class="form-group"> 
+                                <label> {{ form.water_usage.label }}</label>
+                                {% for subfield in form.water_usage  %}
+                                <tr>
+                                    <td>{{ subfield }}</td>
+                                    <td>{{ subfield.label }}</td>
+                                </tr>
+                                {% endfor %}
+                            </div>
+        
+                            <div class="form-group"> 
+                                <label> {{ form.energy_usage.label }}</label>
+                                {% for subfield in form.energy_usage  %}
+                                <tr>
+                                    <td>{{ subfield }}</td>
+                                    <td>{{ subfield.label }}</td>
+                                </tr>
+                                {% endfor %}
+                            </div>
+        
+                            <div class="form-group"> 
+                                <label> {{ form.emissions.label }}</label>
+                                {% for subfield in form.emissions  %}
+                                <tr>
+                                    <td>{{ subfield }}</td>
+                                    <td>{{ subfield.label }}</td>
+                                </tr>
+                                {% endfor %}
+                            </div>
+        
+                        
+                            <div class="form-group"> 
+                                <label> {{ form.waste.label }}</label>
+                                {% for subfield in form.waste  %}
+                                <tr>
+                                    <td>{{ subfield }}</td>
+                                    <td>{{ subfield.label }}</td>
+                                </tr>
+                                {% endfor %}
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="form-group"> 
-                        <label> {{ form.recicled_used.label }}</label>
-                        {% for subfield in form.recicled_used   %}
-                        <tr>
-                            <td>{{ subfield }}</td>
-                            <td>{{ subfield.label }}</td>
-                        </tr>
-                        {% endfor %}
-                    </div>
-
-                    <div class="form-group"> 
-                        <label> {{ form.water_usage.label }}</label>
-                        {% for subfield in form.water_usage  %}
-                        <tr>
-                            <td>{{ subfield }}</td>
-                            <td>{{ subfield.label }}</td>
-                        </tr>
-                        {% endfor %}
-                    </div>
-
-                    <div class="form-group"> 
-                        <label> {{ form.energy_usage.label }}</label>
-                        {% for subfield in form.energy_usage  %}
-                        <tr>
-                            <td>{{ subfield }}</td>
-                            <td>{{ subfield.label }}</td>
-                        </tr>
-                        {% endfor %}
-                    </div>
-
-                    <div class="form-group"> 
-                        <label> {{ form.emissions.label }}</label>
-                        {% for subfield in form.emissions  %}
-                        <tr>
-                            <td>{{ subfield }}</td>
-                            <td>{{ subfield.label }}</td>
-                        </tr>
-                        {% endfor %}
-                    </div>
-
-                
-                    <div class="form-group"> 
-                        <label> {{ form.waste.label }}</label>
-                        {% for subfield in form.waste  %}
-                        <tr>
-                            <td>{{ subfield }}</td>
-                            <td>{{ subfield.label }}</td>
-                        </tr>
-                        {% endfor %}
-                    </div>
-
                 </div>
 
                 <div class="col-12"> <!-- SOCIAL -->
-
-                    <div class="form-group"> 
-                        <label> {{ form.employee_satisfaction.label }}</label>
-                        {% for subfield in form.employee_satisfaction  %}
-                        <tr>
-                            <td>{{ subfield }}</td>
-                            <td>{{ subfield.label }}</td>
-                        </tr>
-                        {% endfor %}
-                    </div>
-
-                    <div class="form-group"> 
-                        <label> {{ form.customer_satisfaction.label }}</label>
-                        {% for subfield in form.customer_satisfaction  %}
-                        <tr>
-                            <td>{{ subfield }}</td>
-                            <td>{{ subfield.label }}</td>
-                        </tr>
-                        {% endfor %}
-                    </div>
-
-                    <div class="form-group"> 
-                        <label> {{ form.community_satisfaction.label }}</label>
-                        {% for subfield in form.community_satisfaction  %}
-                        <tr>
-                            <td>{{ subfield }}</td>
-                            <td>{{ subfield.label }}</td>
-                        </tr>
-                        {% endfor %}
+                    <div class ="row" id="third_section">
+                        <div class="col-4" id="img_soc">
+                            <img src="{{ url_for('static', filename='/images/social.jpg') }}" alt="social" style="width: -webkit-fill-available; height: -webkit-fill-available;padding-bottom: 20px; padding-top: 20px">
+                        </div>
+                        <div class="col-6" id="text_soc">
+                            <div class="form-group"> 
+                                <label> {{ form.employee_satisfaction.label }}</label>
+                                {% for subfield in form.employee_satisfaction  %}
+                                <tr>
+                                    <td>{{ subfield }}</td>
+                                    <td>{{ subfield.label }}</td>
+                                </tr>
+                                {% endfor %}
+                            </div>
+        
+                            <div class="form-group"> 
+                                <label> {{ form.customer_satisfaction.label }}</label>
+                                {% for subfield in form.customer_satisfaction  %}
+                                <tr>
+                                    <td>{{ subfield }}</td>
+                                    <td>{{ subfield.label }}</td>
+                                </tr>
+                                {% endfor %}
+                            </div>
+        
+                            <div class="form-group"> 
+                                <label> {{ form.community_satisfaction.label }}</label>
+                                {% for subfield in form.community_satisfaction  %}
+                                <tr>
+                                    <td>{{ subfield }}</td>
+                                    <td>{{ subfield.label }}</td>
+                                </tr>
+                                {% endfor %}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
