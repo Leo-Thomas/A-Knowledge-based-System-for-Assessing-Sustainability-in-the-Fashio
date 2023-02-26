@@ -1,4 +1,5 @@
 from flask import Flask, render_template,redirect, url_for
+from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import SubmitField
 from wtforms.fields import RadioField
@@ -6,6 +7,7 @@ from wtforms.validators import InputRequired
 import secrets
 
 app = Flask(__name__)
+bootstrap = Bootstrap(app)
 
 key = secrets.token_bytes(32)
 key_hex = key.hex()
@@ -14,6 +16,8 @@ app.config['SECRET_KEY'] = key_hex
 class ExpertSystemForm(FlaskForm):
     choices = ["Poor","Average","Good"]
     validators=[InputRequired("You must choose one option.")]
+    
+    # Economic field
     material_cost = RadioField("Material cost:",choices = choices,
                                validators=validators)           
     labour_cost = RadioField("Labour cost:",choices = choices,
@@ -24,6 +28,7 @@ class ExpertSystemForm(FlaskForm):
                              validators=validators)
     product_quality = RadioField("Product quality:",choices = choices,
                              validators=validators)
+    # Environmental field
     material_usage = RadioField("Material usage:",choices = choices,
                              validators=validators)
     recicled_used = RadioField("Recicled used:",choices = choices,
@@ -36,6 +41,7 @@ class ExpertSystemForm(FlaskForm):
                              validators=validators)
     waste = RadioField("Waste:",choices = choices,
                              validators=validators)
+    # Social field
     employee_satisfaction = RadioField("Employee satisfaction:",choices = choices,
                             validators=validators)
     customer_satisfaction = RadioField("Customer satisfaction:",choices = choices,
