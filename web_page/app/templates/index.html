@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+        <title>Expert System</title>
+    </head>
+
+  <body>
+      <h1> Expert system </h1>
+
+      <form action="" method="POST" >
+        
+        
+        {{ form.csrf_token }}
+        <div class="form-group "> 
+            
+            <label class = "radio-inline"> {{ form.material_cost.label }}</label>
+            {% for subfield in form.material_cost %}
+            <tr>
+                <td>{{ subfield }}</td>
+                <td>{{ subfield.label }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+
+
+        <div class="form-group"> 
+            <label> {{ form.labour_cost.label }}</label>
+            {% for subfield in form.labour_cost %}
+            <tr>
+                <td>{{ subfield }}</td>
+                <td>{{ subfield.label }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+
+        <div class="form-group"> 
+            <label> {{ form.lead_time.label }}</label>
+            {% for subfield in form.lead_time %}
+            <tr>
+                <td>{{ subfield }}</td>
+                <td>{{ subfield.label }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+
+        <div class="form-group"> 
+            <label> {{ form.on_time_delivery.label }}</label>
+            {% for subfield in form.on_time_delivery %}
+            <tr>
+                <td>{{ subfield }}</td>
+                <td>{{ subfield.label }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+
+        <div class="form-group"> 
+            <label> {{ form.product_quality.label }}</label>
+            {% for subfield in form.product_quality %}
+            <tr>
+                <td>{{ subfield }}</td>
+                <td>{{ subfield.label }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+
+        <div class="form-group"> 
+            <label> {{ form.material_usage.label }}</label>
+            {% for subfield in form.material_usage  %}
+            <tr>
+                <td>{{ subfield }}</td>
+                <td>{{ subfield.label }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+
+        <div class="form-group"> 
+            <label> {{ form.recicled_used.label }}</label>
+            {% for subfield in form.recicled_used   %}
+            <tr>
+                <td>{{ subfield }}</td>
+                <td>{{ subfield.label }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+
+        <div class="form-group"> 
+            <label> {{ form.water_usage.label }}</label>
+            {% for subfield in form.water_usage  %}
+            <tr>
+                <td>{{ subfield }}</td>
+                <td>{{ subfield.label }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+
+        <div class="form-group"> 
+            <label> {{ form.energy_usage.label }}</label>
+            {% for subfield in form.energy_usage  %}
+            <tr>
+                <td>{{ subfield }}</td>
+                <td>{{ subfield.label }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+
+        <div class="form-group"> 
+            <label> {{ form.emissions.label }}</label>
+            {% for subfield in form.emissions  %}
+            <tr>
+                <td>{{ subfield }}</td>
+                <td>{{ subfield.label }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+
+        
+        <div class="form-group"> 
+            <label> {{ form.waste.label }}</label>
+            {% for subfield in form.waste  %}
+            <tr>
+                <td>{{ subfield }}</td>
+                <td>{{ subfield.label }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+
+        <div class="form-group"> 
+            <label> {{ form.employee_satisfaction.label }}</label>
+            {% for subfield in form.employee_satisfaction  %}
+            <tr>
+                <td>{{ subfield }}</td>
+                <td>{{ subfield.label }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+
+        <div class="form-group"> 
+            <label> {{ form.customer_satisfaction.label }}</label>
+            {% for subfield in form.customer_satisfaction  %}
+            <tr>
+                <td>{{ subfield }}</td>
+                <td>{{ subfield.label }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+
+        <div class="form-group"> 
+            <label> {{ form.community_satisfaction.label }}</label>
+            {% for subfield in form.community_satisfaction  %}
+            <tr>
+                <td>{{ subfield }}</td>
+                <td>{{ subfield.label }}</td>
+            </tr>
+            {% endfor %}
+        </div>
+
+        
+        <!-- <button type="submit">Submit</button> -->
+        {{ form.submit() }}
+      
+    </form>
+
+  </body>
+</html>
