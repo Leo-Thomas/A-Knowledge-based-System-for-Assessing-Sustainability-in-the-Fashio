@@ -19,7 +19,7 @@
 
 In this work, we propose a knowledge-based system to evaluate the sustainability of SMEs in the fashion industry. The system is designed to evaluate sustainability across a range of indicators, including environmental impact, social responsibility, and economic viability. By using fuzzy logic, the system can accommodate the inherent uncertainty and subjectivity of sustainability metrics, enabling a more nuanced and accurate evaluation of a company's sustainability performance. The rules that guide the system were developed through an exhaustive review of scientific literature, ensuring that they are grounded in the best available knowledge on sustainability metrics and practices in the fashion industry.
 
-This project was developed by Leo Ramos, Mike Bermeo, Andrés Quelal, and Anthony Crespo students at [Yachay Tech University](https://www.yachaytech.edu.ec/en/).
+This project was developed by Mike Bermeo, Andrés Quelal, Anthony Crespo, and Leo Ramos students at [Yachay Tech University](https://www.yachaytech.edu.ec/en/).
 
 ### Demo
 
