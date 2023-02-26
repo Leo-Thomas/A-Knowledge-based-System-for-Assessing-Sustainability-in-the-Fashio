@@ -14,7 +14,7 @@ key_hex = key.hex()
 app.config['SECRET_KEY'] = key_hex
 
 class ExpertSystemForm(FlaskForm):
-    choices = ["Poor","Average","Good"]
+    choices = ["1","2","3","4","5","6","7"]
     validators=[InputRequired("You must choose one option.")]
     
     # Economic field
@@ -55,20 +55,20 @@ class ExpertSystemForm(FlaskForm):
 def index():
     form  = ExpertSystemForm()
     if form.validate_on_submit():
-        material_cost_answer = form.material_cost.data
-        labour_cost = form.labour_cost.data
-        lead_time = form.lead_time.data
-        on_time_delivery = form.on_time_delivery.data
-        product_quality = form.product_quality.data
-        material_usage = form.material_usage.data
-        recicled_used = form.recicled_used.data
-        water_usage = form.water_usage.data
-        energy_usage = form.energy_usage.data
-        emissions = form.emissions.data
-        waste = form.waste.data
-        employee_satisfaction = form.employee_satisfaction.data
-        customer_satisfaction = form.customer_satisfaction.data
-        community_satisfaction = form.community_satisfaction.data
+        material_cost_answer = int(form.material_cost.data)
+        labour_cost = int(form.labour_cost.data)
+        lead_time = int(form.lead_time.data)
+        on_time_delivery = int(form.on_time_delivery.data)
+        product_quality = int(form.product_quality.data)
+        material_usage = int(form.material_usage.data)
+        recicled_used = int(form.recicled_used.data)
+        water_usage = int(form.water_usage.data)
+        energy_usage = int(form.energy_usage.data)
+        emissions = int(form.emissions.data)
+        waste = int(form.waste.data)
+        employee_satisfaction = int(form.employee_satisfaction.data)
+        customer_satisfaction = int(form.customer_satisfaction.data)
+        community_satisfaction = int(form.community_satisfaction.data)
         return redirect(url_for('index'))
 
     return render_template("index.html", form = form)

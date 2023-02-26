@@ -1,7 +1,7 @@
-
+/* 
 .container{
     background-color: rgb(107, 88, 88);
-}
+} */
 
 .col-12{
     padding: 10px;
@@ -10,4 +10,34 @@
 .radio-inline {
     display: inline-block;
     margin-left: 10px; 
+}
+
+/* ECONOMIC*/
+
+#text_eco{
+    padding: 20px;
+}
+
+#first_section{
+    border: 2px solid rgb(22, 19, 19);
+}
+
+/* ENVIROMENT*/
+
+#text_env{
+    padding: 20px;
+}
+
+#second_section{
+    border: 2px solid rgb(22, 19, 19);
+}
+
+/* SOCIAL */
+
+#text_soc{
+    padding: 20px;
+}
+
+#third_section{
+    border: 2px solid rgb(22, 19, 19);
 }
