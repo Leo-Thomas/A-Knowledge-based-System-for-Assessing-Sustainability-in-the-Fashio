@@ -8,50 +8,43 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title> {% block title %} Expert System {% endblock %} </title>
     {% endblock %}
 </head>
 
 
 <body>
-    <header>
-        <div class="first-header" >
-            <div class="head_container"> 
-                <h1> Expert System</h1>
-                <p> Sustainability sytem to fashion's Industries</p>
-            </div>      
-    </header>
+    <section class="home">
+        <video class="video-slide" src="../static/images/video.mp4" autoplay muted loop ></video>
+        <div class="content" id="titu_principal"> 
+            <h1> Expert System </h1>
+            <p> Sustainability sytem to fashion's Industries</p>
+        </div> 
+    </section>
 
     <div class="titu"> 
         <h1> <b> Metricas y desarrollo del sistema </b> </h1>
     </div>
 
-    <section>
-        <div class="main-tablaa">
-            <h3 class="muestra"> Enfocar  posibles intervenciones</h3>
-            <div>
-                <div class="tablaa">
-                    <img class="mySlides1" alt="font" src="{{ url_for('static', filename='/images/font.jpg') }}">
+    <section class="metricas">
+        <div class="container">
+            <h3 class="section-title"> Enfocar  posibles intervenciones</h3>
+            <div class="content">
+                <div class="image">
+                    <img alt="font" src="../static/images/font.jpg">
                 </div>
-                <div class="tablaa" style="align-items: center;">
-                    <ol>
-                        <li> Con base a los indicadores y su resultado tomar acciones para seguir los estandares de sostenibilidad establecidos. </li>
-                        <li> El sistema recomienda acciones a tomar de acuerdo al puntaje calculado de cada métrica</li>
-                        <li> La escala de medición se establecio de la siguiente manera: </li>
-                    </ol>
+                <div class="info">
+                    <h4 class="info-title"> Descripción </h4>
+                    <p> El sistema de expertos se enfoca en la evaluación de las métricas de sostenibilidad 
+                        en la industria de la moda, con el fin de identificar las áreas de oportunidad
+                         y tomar acciones para mejorar la sostenibilidad de la industria. Con 
+                         base a los indicadores y su resultado tomar acciones para seguir los estandares
+                          de sostenibilidad establecidos. El sistema recomienda acciones a tomar de acuerdo 
+                          al puntaje calculado de cada métrica</p>
                 </div>
-                
             </div>
         </div>
-    </section>
-
-    <div class="titu"> 
-        <h1> <b> Rango </b> </h1>
-    </div>
-
-    <section>
-
-
     </section>
 
     <div class="titu" > 
@@ -142,7 +135,7 @@
 
                             <div class="col-1">
                                 <div class="overlay_tex2" style="margin-left: -37px;">
-                                    <h1 class="text2"> <u>  ECONOMY </u> </h1>
+                                    <h1 class="text2"> <u>  ECONOMIC </u> </h1>
                                 </div>
                             </div>
                         </div>
@@ -240,7 +233,7 @@
                             </div>
                             <div class="col-1">
                                 <div class="overlay_tex3" style="margin-left: -37px;">
-                                    <h1 class="text3"> <u> ENVIRONMENT </u> </h1>
+                                    <h1 class="text3"> <u> ENVIRONMENTAL </u> </h1>
                                 </div>
                             </div>
                         </div>
@@ -314,6 +307,19 @@
         </form>
     </section>
 
+    <script> 
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 400,
+        });
+        ScrollReveal().reveal('.section-title', {delay: 500, origin: 'left'});
+        ScrollReveal().reveal('#titu_principal', {delay: 500});
+        ScrollReveal().reveal('.image', {delay: 500, origin: 'top'});
+        ScrollReveal().reveal('.info', {delay: 600, origin: 'bottom'});
+        ScrollReveal().reveal('.formulario', {delay: 600});         
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
