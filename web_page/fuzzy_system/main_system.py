@@ -1,7 +1,7 @@
-from economic_fuzzy import Economic_fuzzy
-from environmental_fuzzy import Environmental_fuzzy
-from social_fuzzy import Social_fuzzy
-from second_stage_fuzzy import Final_fuzzy
+from fuzzy_system.economic_fuzzy import Economic_fuzzy
+from fuzzy_system.environmental_fuzzy import Environmental_fuzzy
+from fuzzy_system.social_fuzzy import Social_fuzzy
+from fuzzy_system.second_stage_fuzzy import Final_fuzzy
 
 
 def system(material_cost, labour_cost, lead_time, on_time_delivery, product_quality, 
@@ -18,7 +18,7 @@ def system(material_cost, labour_cost, lead_time, on_time_delivery, product_qual
     final_stage = Final_fuzzy(eco['FB4']['result'],env['FB5']['result'],soc['FB2']['result']).run()
 
     print(final_stage['name']+':',final_stage['FB_FINAL']['result'],final_stage['FB_FINAL']['membership_interp']['label'])
-    return [eco,env,soc,final_stage]
+    return {'economical':eco,'environmental': env, 'social': soc,'final_stage': final_stage}
 
 
 if __name__=='__main__':
