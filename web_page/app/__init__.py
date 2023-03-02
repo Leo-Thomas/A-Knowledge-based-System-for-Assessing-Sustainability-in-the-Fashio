@@ -4,6 +4,7 @@ from flask_wtf import FlaskForm
 from wtforms import SubmitField
 from wtforms.fields import RadioField
 from wtforms.validators import InputRequired
+from fuzzy_system.main_system import system
 import secrets
 
 app = Flask(__name__)
@@ -51,8 +52,14 @@ class ExpertSystemForm(FlaskForm):
     submit = SubmitField('Submit')
 
 
-@app.route("/", methods = ['GET', 'POST'])
-def index():
+@app.route("/", methods = ['GET'])
+def index_get():
+    form  = ExpertSystemForm()
+    return render_template("index.html", form = form)
+
+@app.route("/", methods = ['POST'])
+def index_post():
+    result={}
     form  = ExpertSystemForm()
     if form.validate_on_submit():
         material_cost_answer = int(form.material_cost.data)
@@ -69,7 +76,10 @@ def index():
         employee_satisfaction = int(form.employee_satisfaction.data)
         customer_satisfaction = int(form.customer_satisfaction.data)
         community_satisfaction = int(form.community_satisfaction.data)
-        return redirect(url_for('index'))
+
+        result = system(material_cost_answer,labour_cost,lead_time,on_time_delivery,product_quality,material_usage
+                        ,recicled_used,water_usage,energy_usage,emissions,waste,employee_satisfaction,customer_satisfaction,community_satisfaction)
+        return render_template("sustainability_score.html", form = form, results=result)
 
     return render_template("index.html", form = form)
 
