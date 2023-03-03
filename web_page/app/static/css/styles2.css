@@ -2,6 +2,13 @@
     font-family: 'Poppins', sans serif;
 } 
 
+#results{
+    font-size: 23px;
+}
+
+.content h2{
+    font-size: 32px;
+}
 
 .home video{
     z-index: 000;
@@ -47,7 +54,7 @@
 .home .content{
     z-index: 888;
     color: #fff;
-    width: 70%;
+    width: 40%;
     margin-top: 50px;
     margin-left: 50px;
 }
@@ -74,40 +81,63 @@
     padding-bottom:20px ;
 }
 
-/* .leff-side{
-    width:50%;
-    height: 100%;
-    float: left;
-    right: 0px;
-    position: absolute;
-    display: flex;
-}
-
-.scores{
-    padding:20px;
-    width: 100%;
-    position:relative;
-}
-
-.env_score{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
- */
-
-
 .left-side{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    position: absolute; 
 }
 
 .scores{
     display: flex;
-    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    padding:20px;
+    justify-content: space-evenly;
+    height: 90%;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 6%;
+    margin-left: 15%;
+    margin-right: 10%;
+    background: transparent;
+    backdrop-filter: blur(4px);
+    z-index: 1;
 }
 
 .env_score .eco_score .soc_score{
-    margin: 10px;    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color:white;
 }
+
+.env_score h4{
+    color:white;
+}
+
+.eco_score h4{
+    color:white;
+}
+
+.soc_score h4{
+    color:#fff;
+}
+
+#res_env{
+    color:white;
+    text-align: center;
+}
+
+#res_eco{
+    color:white;
+    text-align: center;
+}
+
+#res_soc{
+    color:white;
+    text-align: center;
+}
+
+
