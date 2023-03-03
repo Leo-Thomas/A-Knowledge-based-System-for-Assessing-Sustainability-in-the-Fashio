@@ -92,7 +92,7 @@ class Final_fuzzy:
         self.desfuzzy()
     
         fb_final={'meta':'FB_ECO + FB_ENV + FB_SOC',
-            'result':self.fissing_final.output['FIS_FINAL'],
+            'result':round(self.fissing_final.output['FIS_FINAL'],2),
              'membership_interp':self.infer(self.fis_final,self.fissing_final,'FIS_FINAL')}
 
         return {'name':'Susteinability Score',

@@ -175,7 +175,7 @@ class Economic_fuzzy:
              'membership_interp':self.infer(self.fis3_eco,self.fissing3_eco,'FIS3_ECO')}
 
         fb4={'meta':'Product Quality + FB3',
-            'result':self.fissing4_eco.output['FIS4_ECO'],
+            'result':round(self.fissing4_eco.output['FIS4_ECO'],2),
              'membership_interp':self.infer(self.fis4_eco,self.fissing4_eco,'FIS4_ECO')}
         return {'name':'Economic',
                 'FB1':fb1,'FB2':fb2,
