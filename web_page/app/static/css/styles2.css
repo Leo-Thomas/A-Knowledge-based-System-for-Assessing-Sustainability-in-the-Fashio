@@ -3,7 +3,11 @@
 } 
 
 #results{
-    font-size: 23px;
+    font-size: 6em;
+}
+
+#titulo_sec_2{
+    font-size: 30px;
 }
 
 .content h2{
@@ -17,7 +21,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; 
 }
 
 .home {
@@ -27,8 +31,9 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: red;
+    background: white;
 }
+
 
 .metricas {
     position: relative;
@@ -60,11 +65,11 @@
 }
 
 .home .content h1{
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 5px;
-    line-height: 75px;
+    line-height: 53px;
     margin-bottom: 20px;
 }
 
@@ -127,20 +132,37 @@
 
 #res_env{
     color:white;
-    font-size: 3em;
+    font-size: 40px;
     text-align: center;
 }
 
 #res_eco{
     color:white;
-    font-size: 3em;
+    font-size: 40px;
     text-align: center;
 }
 
 #res_soc{
     color:white;
-    font-size: 3em;
+    font-size: 40px;
     text-align: center;
 }
 
+.home_2 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: white;
+}
+
+.home_2 .content_2{
+    z-index: 888;
+    color: black;
+    width: 40%;
+    margin-top: 50px;
+    margin-left: 50px;
+}
 
