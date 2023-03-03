@@ -102,7 +102,7 @@ class Social_fuzzy:
              'membership_interp':self.infer(self.fis1_soc,self.fissing1_soc,'FIS1_SOC')}
         
         fb2={'meta':'Lead Time + On time delivery',
-            'result':self.fissing2_soc.output['FIS2_SOC'],
+            'result':round(self.fissing2_soc.output['FIS2_SOC'],2),
              'membership_interp':self.infer(self.fis2_soc,self.fissing2_soc,'FIS2_SOC')}
 
         return {'name':'Social',

@@ -122,21 +122,24 @@
 }
 
 .soc_score h4{
-    color:#fff;
+    color:white;
 }
 
 #res_env{
     color:white;
+    font-size: 3em;
     text-align: center;
 }
 
 #res_eco{
     color:white;
+    font-size: 3em;
     text-align: center;
 }
 
 #res_soc{
     color:white;
+    font-size: 3em;
     text-align: center;
 }
 

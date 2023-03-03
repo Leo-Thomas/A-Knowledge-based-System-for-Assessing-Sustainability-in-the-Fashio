@@ -214,7 +214,7 @@ class Environmental_fuzzy:
              'membership_interp':self.infer(self.fis4_env,self.fissing4_env,'FIS4_ENV')}
         
         fb5={'meta':'FB3 + FB4',
-            'result':self.fissing5_env.output['FIS5_ENV'],
+            'result':round(self.fissing5_env.output['FIS5_ENV'],2),
              'membership_interp':self.infer(self.fis5_env,self.fissing5_env,'FIS5_ENV')}
         
         return {'name':'Environmental',
