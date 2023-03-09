@@ -1,4 +1,4 @@
-from flask import Flask, render_template,redirect, url_for
+from flask import Flask, render_template,redirect, url_for,session
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import SubmitField
@@ -16,40 +16,40 @@ app.config['SECRET_KEY'] = key_hex
 
 class ExpertSystemForm(FlaskForm):
     choices = ["1","2","3","4","5","6","7"]
-    validators=[InputRequired("You must choose one option.")]
+    validators=[InputRequired("debes elegir una opción.")]
     
     # Economic field
-    material_cost = RadioField("Material cost:",choices = choices,
+    material_cost = RadioField("Costo material:",choices = choices,
                                validators=validators)           
-    labour_cost = RadioField("Labour cost:",choices = choices,
+    labour_cost = RadioField("Costo laboral:",choices = choices,
                              validators=validators)
-    lead_time = RadioField("Lead time:",choices = choices,
+    lead_time = RadioField("Tiempo de espera:",choices = choices,
                              validators=validators)
-    on_time_delivery = RadioField("On-time-delivery:",choices = choices,
+    on_time_delivery = RadioField("Tiempo de entrega:",choices = choices,
                              validators=validators)
-    product_quality = RadioField("Product quality:",choices = choices,
+    product_quality = RadioField("Calidad del producto:",choices = choices,
                              validators=validators)
     # Environmental field
-    material_usage = RadioField("Material usage:",choices = choices,
+    material_usage = RadioField("Usos de materiales:",choices = choices,
                              validators=validators)
-    recicled_used = RadioField("Recicled used:",choices = choices,
+    recicled_used = RadioField("Material reciclado usado:",choices = choices,
                              validators=validators)
-    water_usage = RadioField("Water usage:",choices = choices,
+    water_usage = RadioField("Consumo de agua:",choices = choices,
                              validators=validators)
-    energy_usage = RadioField("Energy usage:",choices = choices,
+    energy_usage = RadioField("Consumo de energía:",choices = choices,
                              validators=validators)
-    emissions = RadioField("Emissions:",choices = choices,
+    emissions = RadioField("Emisiones:",choices = choices,
                              validators=validators)
-    waste = RadioField("Waste:",choices = choices,
+    waste = RadioField("Desperdicio:",choices = choices,
                              validators=validators)
     # Social field
-    employee_satisfaction = RadioField("Employee satisfaction:",choices = choices,
+    employee_satisfaction = RadioField("Satisfacción del empleado:",choices = choices,
                             validators=validators)
-    customer_satisfaction = RadioField("Customer satisfaction:",choices = choices,
+    customer_satisfaction = RadioField("Satisfacción del consumidor:",choices = choices,
                             validators=validators)
-    community_satisfaction = RadioField("Community satisfaction:",choices = choices,
+    community_satisfaction = RadioField("Satisfacción de la comunidad:",choices = choices,
                             validators=validators)
-    submit = SubmitField('Submit')
+    submit = SubmitField('Enviar')
 
 
 @app.route("/", methods = ['GET'])
@@ -57,8 +57,8 @@ def index_get():
     form  = ExpertSystemForm()
     return render_template("index.html", form = form)
 
-@app.route("/", methods = ['POST'])
-def index_post():
+@app.route("/score", methods = ['POST'])
+def score_post():
     result={}
     form  = ExpertSystemForm()
     if form.validate_on_submit():
@@ -79,11 +79,17 @@ def index_post():
 
         result = system(material_cost_answer,labour_cost,lead_time,on_time_delivery,product_quality,material_usage
                         ,recicled_used,water_usage,energy_usage,emissions,waste,employee_satisfaction,customer_satisfaction,community_satisfaction)
-        return render_template("sustainability_score.html", form = form, results=result)
+        session['result']=result
+        return render_template("sustainability_score.html", results=result)
 
-    return render_template("index.html", form = form)
-
-
+    return render_template("index.html")
+@app.route("/score", methods = ['GET'])
+def score_get():
+    result = session.get('result')
+    if result:
+        return render_template("sustainability_score.html",  results=result)
+    else:
+        return redirect(url_for('index_get'))
 
 if __name__ =="__main__":
     #app.jinja_env.auto_reload = True
