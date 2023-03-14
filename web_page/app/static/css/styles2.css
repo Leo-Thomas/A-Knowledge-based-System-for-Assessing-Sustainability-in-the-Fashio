@@ -102,7 +102,7 @@
     height: 90%;
     border: 1px solid white;
     border-radius: 5px;
-    margin-top: 6%;
+    margin-top: 5%;
     margin-left: 15%;
     margin-right: 10%;
     background: transparent;
@@ -160,12 +160,14 @@
     flex-direction: column;
     justify-content: space-evenly;
     color: white;
-    font-size: 25px;
+    font-size: 17px;
     text-align: left;
+    padding-left: 22px;
+    padding-right: 22px;
 }
 #overall{
-    margin-top: 6%;
-    font-size: 27px;
+    margin-top: 4%;
+    font-size: 22px;
     text-align: center;
     font-weight: bold;
 }
@@ -186,4 +188,30 @@
     margin-top: 50px;
     margin-left: 50px;
 }
+/* 
+.recomender {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
 
+.bg_color{
+    content: "";
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 3px;
+    background: linear-gradient(45deg,#454546,#8c8c8c,#5dc1b9,#7462ff);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color {
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+} */
