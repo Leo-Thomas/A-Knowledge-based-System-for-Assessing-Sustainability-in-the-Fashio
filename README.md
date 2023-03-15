@@ -23,7 +23,7 @@ This project was developed by Mike Bermeo, Andrés Quelal, Anthony Crespo, and L
 
 ### Demo
 
-You can see a demo [here](code/app/build/outputs/apk/debug) to test our system.
+You can see a demo [here](https://sustainability-system.herokuapp.com/) to test our system.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
