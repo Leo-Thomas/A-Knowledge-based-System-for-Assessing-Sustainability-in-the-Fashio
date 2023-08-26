@@ -1,4 +1,4 @@
-# A Knowledge-based System for Assessing Sustainability for SMEs in the Fashion Industry
+# SustainMeter: A Knowledge-based System for Assessing Sustainability for SMEs in the Fashion Industry
 
 <details>
   <summary>Table of Contents</summary>
