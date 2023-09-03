@@ -67,22 +67,22 @@ class Economic_fuzzy:
 
     def consequent(self):
         #FIS1_ECO
-        self.fis1_eco = ctrl.Consequent(self.range,'FIS1_ECO')
+        self.fis1_eco = ctrl.Consequent(self.range,'FIS1_ECO',defuzzify_method='mom')
         self.fis1_eco['poor'] = fuzz.trimf(self.fis1_eco.universe, self.poor)
         self.fis1_eco['average'] = fuzz.trimf(self.fis1_eco.universe, self.average)
         self.fis1_eco['good'] = fuzz.trimf(self.fis1_eco.universe, self.good)
         #FIS2_ECO
-        self.fis2_eco = ctrl.Consequent(self.range,'FIS2_ECO')
+        self.fis2_eco = ctrl.Consequent(self.range,'FIS2_ECO', defuzzify_method='mom')
         self.fis2_eco['poor'] = fuzz.trimf(self.fis2_eco.universe, self.poor)
         self.fis2_eco['average'] = fuzz.trimf(self.fis2_eco.universe, self.average)
         self.fis2_eco['good'] = fuzz.trimf(self.fis2_eco.universe, self.good)
         #FIS3_ECO
-        self.fis3_eco = ctrl.Consequent(self.range,'FIS3_ECO')
+        self.fis3_eco = ctrl.Consequent(self.range,'FIS3_ECO', defuzzify_method='mom')
         self.fis3_eco['poor'] = fuzz.trimf(self.fis3_eco.universe, self.poor)
         self.fis3_eco['average'] = fuzz.trimf(self.fis3_eco.universe, self.average)
         self.fis3_eco['good'] = fuzz.trimf(self.fis3_eco.universe, self.good)
         #FIS4_ECO
-        self.fis4_eco = ctrl.Consequent(self.range,'FIS4_ECO')
+        self.fis4_eco = ctrl.Consequent(self.range,'FIS4_ECO', defuzzify_method='mom')
         self.fis4_eco['poor'] = fuzz.trimf(self.fis4_eco.universe, self.poor)
         self.fis4_eco['average'] = fuzz.trimf(self.fis4_eco.universe, self.average)
         self.fis4_eco['good'] = fuzz.trimf(self.fis4_eco.universe, self.good)

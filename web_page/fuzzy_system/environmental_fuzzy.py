@@ -74,31 +74,31 @@ class Environmental_fuzzy:
 
     def consequent(self):
         #FIS1_ENV
-        self.fis1_env= ctrl.Consequent(self.range,'FIS1_ENV')
+        self.fis1_env= ctrl.Consequent(self.range,'FIS1_ENV', defuzzify_method='mom')
         self.fis1_env['poor'] = fuzz.trimf(self.fis1_env.universe, self.poor)
         self.fis1_env['average'] = fuzz.trimf(self.fis1_env.universe, self.average)
         self.fis1_env['good'] = fuzz.trimf(self.fis1_env.universe, self.good)
 
         #FIS2_ENV
-        self.fis2_env = ctrl.Consequent(self.range,'FIS2_ENV')
+        self.fis2_env = ctrl.Consequent(self.range,'FIS2_ENV', defuzzify_method='mom')
         self.fis2_env['poor'] = fuzz.trimf(self.fis2_env.universe, self.poor)
         self.fis2_env['average'] = fuzz.trimf(self.fis2_env.universe, self.average)
         self.fis2_env['good'] = fuzz.trimf(self.fis2_env.universe, self.good)
 
         #FIS3_ENV
-        self.fis3_env = ctrl.Consequent(self.range,'FIS3_ENV')
+        self.fis3_env = ctrl.Consequent(self.range,'FIS3_ENV', defuzzify_method='mom')
         self.fis3_env['poor'] = fuzz.trimf(self.fis3_env.universe, self.poor)
         self.fis3_env['average'] = fuzz.trimf(self.fis3_env.universe, self.average)
         self.fis3_env['good'] = fuzz.trimf(self.fis3_env.universe, self.good)
 
         #FIS4_ENV
-        self.fis4_env = ctrl.Consequent(self.range,'FIS4_ENV')
+        self.fis4_env = ctrl.Consequent(self.range,'FIS4_ENV', defuzzify_method='mom')
         self.fis4_env['poor'] = fuzz.trimf(self.fis4_env.universe, self.poor)
         self.fis4_env['average'] = fuzz.trimf(self.fis4_env.universe, self.average)
         self.fis4_env['good'] = fuzz.trimf(self.fis4_env.universe, self.good)
 
         #FIS4_ENV
-        self.fis5_env = ctrl.Consequent(self.range,'FIS5_ENV')
+        self.fis5_env = ctrl.Consequent(self.range,'FIS5_ENV', defuzzify_method='mom')
         self.fis5_env['poor'] = fuzz.trimf(self.fis5_env.universe, self.poor)
         self.fis5_env['average'] = fuzz.trimf(self.fis5_env.universe, self.average)
         self.fis5_env['good'] = fuzz.trimf(self.fis5_env.universe, self.good)

@@ -41,12 +41,12 @@ class Social_fuzzy:
 
     def consequent(self):
         #FIS1_SOC
-        self.fis1_soc = ctrl.Consequent(self.range,'FIS1_SOC')
+        self.fis1_soc = ctrl.Consequent(self.range,'FIS1_SOC', defuzzify_method='mom')
         self.fis1_soc['poor'] = fuzz.trimf(self.fis1_soc.universe, self.poor)
         self.fis1_soc['average'] = fuzz.trimf(self.fis1_soc.universe, self.average)
         self.fis1_soc['good'] = fuzz.trimf(self.fis1_soc.universe, self.good)
         #FIS2_SOC
-        self.fis2_soc = ctrl.Consequent(self.range,'FIS2_SOC')
+        self.fis2_soc = ctrl.Consequent(self.range,'FIS2_SOC', defuzzify_method='mom')
         self.fis2_soc['poor'] = fuzz.trimf(self.fis1_soc.universe, self.poor)
         self.fis2_soc['average'] = fuzz.trimf(self.fis1_soc.universe, self.average)
         self.fis2_soc['good'] = fuzz.trimf(self.fis1_soc.universe, self.good)

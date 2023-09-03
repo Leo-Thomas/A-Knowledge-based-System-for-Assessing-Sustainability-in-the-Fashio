@@ -36,7 +36,7 @@ class Final_fuzzy:
 
     def consequent(self):
         #FIS1_SOC
-        self.fis_final = ctrl.Consequent(self.range,'FIS_FINAL')
+        self.fis_final = ctrl.Consequent(self.range,'FIS_FINAL', defuzzify_method='mom')
         self.fis_final['poor'] = fuzz.trimf(self.fis_final.universe, self.poor)
         self.fis_final['average'] = fuzz.trimf(self.fis_final.universe, self.average)
         self.fis_final['good'] = fuzz.trimf(self.fis_final.universe, self.good)
