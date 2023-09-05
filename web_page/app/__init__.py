@@ -19,35 +19,35 @@ class ExpertSystemForm(FlaskForm):
     validators=[InputRequired("debes elegir una opción.")]
     
     # Economic field
-    material_cost = RadioField("Costo material:",choices = choices,
+    material_cost = RadioField("Material Cost:",choices = choices,
                                validators=validators)           
-    labour_cost = RadioField("Costo laboral:",choices = choices,
+    labour_cost = RadioField("Labour Cost:",choices = choices,
                              validators=validators)
-    lead_time = RadioField("Tiempo de espera:",choices = choices,
+    lead_time = RadioField("Lead Time:",choices = choices,
                              validators=validators)
-    on_time_delivery = RadioField("Tiempo de entrega:",choices = choices,
+    on_time_delivery = RadioField("On-time Delivery:",choices = choices,
                              validators=validators)
-    product_quality = RadioField("Calidad del producto:",choices = choices,
+    product_quality = RadioField("Product Quality:",choices = choices,
                              validators=validators)
     # Environmental field
-    material_usage = RadioField("Usos de materiales:",choices = choices,
+    material_usage = RadioField("Material Usage:",choices = choices,
                              validators=validators)
-    recicled_used = RadioField("Material reciclado usado:",choices = choices,
+    recicled_used = RadioField("Recycled Material Used:",choices = choices,
                              validators=validators)
-    water_usage = RadioField("Consumo de agua:",choices = choices,
+    water_usage = RadioField("Water Usage:",choices = choices,
                              validators=validators)
-    energy_usage = RadioField("Consumo de energía:",choices = choices,
+    energy_usage = RadioField("Energy Usage:",choices = choices,
                              validators=validators)
-    emissions = RadioField("Emisiones:",choices = choices,
+    emissions = RadioField("Emissions:",choices = choices,
                              validators=validators)
-    waste = RadioField("Desperdicio:",choices = choices,
+    waste = RadioField("Waste:",choices = choices,
                              validators=validators)
     # Social field
-    employee_satisfaction = RadioField("Satisfacción del empleado:",choices = choices,
+    employee_satisfaction = RadioField("Employee Satisfaction:",choices = choices,
                             validators=validators)
-    customer_satisfaction = RadioField("Satisfacción del consumidor:",choices = choices,
+    customer_satisfaction = RadioField("Customer Satisfaction:",choices = choices,
                             validators=validators)
-    community_satisfaction = RadioField("Satisfacción de la comunidad:",choices = choices,
+    community_satisfaction = RadioField("Community Satisfaction:",choices = choices,
                             validators=validators)
     submit = SubmitField('Enviar')
 
