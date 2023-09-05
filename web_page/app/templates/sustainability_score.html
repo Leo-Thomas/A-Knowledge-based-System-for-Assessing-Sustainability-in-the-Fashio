@@ -233,30 +233,30 @@
                             'average':'promedio',
                             'good':'bueno'}
         
-            document.getElementById('supplementary').innerHTML += `<span>Tu sostenibilidad en la dimension Económica es
+            document.getElementById('supplementary').innerHTML += `<span>Your sustainability in the Economic dimension is:
                                                                 <span style="color:${color[eco]}">${translate[eco]}.</span> ${reco[eco]} </span> <br>`
-            document.getElementById('supplementary').innerHTML += `<span>Tu sostenibilidad en la dimension Ambiental es
+            document.getElementById('supplementary').innerHTML += `<span>Your sustainability in the Environmental dimension is:
                                                                 <span style="color:${color[env]}">${translate[env]}.</span> ${reco[env]} </span> <br>`
-            document.getElementById('supplementary').innerHTML += `<span>Tu sostenibilidad en la dimension Social es
+            document.getElementById('supplementary').innerHTML += `<span>Your sustainability in the Social dimension is:
                                                                 <span style="color:${color[soc]}">${translate[soc]}</span> ${reco[soc]} </span>`
-            document.getElementById('supplementary').innerHTML += `<span id="overall">En general, tu sostenibilidad es: 
+            document.getElementById('supplementary').innerHTML += `<span id="overall">Overall your sustainability is: 
                                                                 <span style="color:${color[overall]}">${translate[overall]}</span> </span>`
             
         /* Seccion de recomendaciones tomadas de chat gpt */
         /* ECONOMICO */
         const eco_rec = document.getElementsByClassName("reco_eco");
         if (data.economical.FB4.membership_interp.label == 'poor'){
-            eco_rec[0].innerText = "Has obtenido una calificación mala en el ámbito económico, significa que debes optimizar tus recursos financieros y generar valor compartido para todos los actores implicados en tu negocio. Algunas acciones que puedes tomar son:"
+            eco_rec[0].innerText = "You have obtained a poor score in the economic field, meaning you should optimize your financial resources and generate shared value for all stakeholders involved in your business. Some actions you can take are:"
             const result_1 = document.getElementById("rec_eco_1");
-            result_1.innerText = "Reducir tus costes operativos mediante la implementación de medidas de eficiencia energética, el uso de materiales reciclados o biodegradables y la minimización de los residuos generados.";
+            result_1.innerText = "Reduce your operational costs by implementing energy efficiency measures, using recycled or biodegradable materials, and minimizing the waste generated.";
             const result_2 = document.getElementById("rec_eco_2");
-            result_2.innerText = "Reducir el tiempo de entrega mediante transporte rápido y eficaz, rutas y horarios óptimos, coordinación con socios e intermediarios y opciones flexibles o personalizadas para los clientes.";
+            result_2.innerText = "Reduce delivery time through fast and efficient transportation, optimal routes and schedules, coordination with partners and intermediaries, and flexible or customized options for customers.";
             const result_3 = document.getElementById("rec_eco_3");
-            result_3.innerText = "Diversificar tus fuentes de ingresos mediante la exploración de nuevos modelos de negocio basados en la economía circular, como el alquiler, el intercambio o la reparación de prendas.";
+            result_3.innerText = "Diversify your income sources by exploring new business models based on the circular economy, such as renting, exchanging, or repairing garments.";
             const result_4 = document.getElementById("rec_eco_4");
-            result_4.innerText = "Mejorar la calidad del producto implementando la norma ISO 9001, hacia controlar la calidad en todas las etapas del proceso productivo, usando materiales duraderos y resistentes.";
+            result_4.innerText = "Improve product quality by implementing the ISO 9001 standard, to control quality at all stages of the production process, using durable and resilient materials.";
             const result_5 = document.getElementById("rec_eco_5");
-            result_5.innerText = "Establecer alianzas estratégicas con otros actores del sector para compartir buenas prácticas, innovar conjuntamente y generar sinergias positivas.";
+            result_5.innerText = "Establish strategic partnerships with other players in the sector to share best practices, innovate together, and generate positive synergies.";
             /* const ul = document.createElement('ul');
             const recomendaciones = ["Reducir tus costes operativos mediante la implementación de medidas de eficiencia energética, el uso de materiales reciclados o biodegradables y la minimización de los residuos generados.","Reducir el tiempo de entrega al elegir los medios de transporte más rápidos y eficientes, al optimizar las rutas y horarios de distribución, al coordinarte con tus socios o intermediarios y al ofrecer opciones flexibles o personalizadas a tus clientes.","Diversificar tus fuentes de ingresos mediante la exploración de nuevos modelos de negocio basados en la economía circular, como el alquiler, el intercambio o la reparación de prendas.","Mejorar la calidad del producto al seguir los estándares internacionales de calidad como la norma ISO 9001, al controlar la calidad en todas las etapas del proceso productivo, al usar materiales duraderos y resistentes y al atender las necesidades y expectativas de tus clientes.","Establecer alianzas estratégicas con otros actores del sector para compartir buenas prácticas, innovar conjuntamente y generar sinergias positivas."];
             for (let i = 0; i < recomendaciones.length; i++){
@@ -267,17 +267,17 @@
             eco_rec[0].appendChild(ul); */
         
         } else if (data.economical.FB4.membership_interp.label == 'average'){
-            eco_rec[0].innerText = " Has obtenido una calificación promedio en el ámbito económico, significa que puedes optimizar tus recursos financieros e incrementar tu competitividad mediante una gestión eficiente e innovadora. Algunas recomendaciones son"
+            eco_rec[0].innerText = "You have obtained an average score in the economic field, meaning you can optimize your financial resources and increase your competitiveness through efficient and innovative management. Some recommendations are:"
             const result_1 = document.getElementById("rec_eco_1");
-            result_1.innerText = "Implementar prácticas de gestión ambiental que te permitan reducir tus costos operativos y aumentar tu eficiencia energética.";
+            result_1.innerText = "Implement environmental management practices that allow you to reduce your operational costs and increase your energy efficiency.";
             const result_2 = document.getElementById("rec_eco_2");
-            result_2.innerText = "Innovar en el diseño y desarrollo de tus productos, ofreciendo soluciones creativas, funcionales y duraderas que satisfagan las necesidades y expectativas de tus clientes.";
+            result_2.innerText = "Innovate in the design and development of your products, offering creative, functional, and durable solutions that meet the needs and expectations of your customers.";
             const result_3 = document.getElementById("rec_eco_3");
-            result_3.innerText = "Diversificar tus canales de distribución y comunicación, aprovechando las ventajas del comercio electrónico y las redes sociales para llegar a nuevos mercados y fidelizar a tus consumidores.";
+            result_3.innerText = "Diversify your distribution and communication channels, leveraging the advantages of e-commerce and social networks to reach new markets and build loyalty with your consumers.";
             const result_4 = document.getElementById("rec_eco_4");
-            result_4.innerText = "Establecer alianzas estratégicas con otros actores del sector moda, como proveedores, competidores o instituciones públicas o privadas, que te permitan compartir conocimientos, experiencias y recursos.";
+            result_4.innerText = "Establish strategic partnerships with other players in the fashion sector, such as suppliers, competitors, or public or private institutions, allowing you to share knowledge, experiences, and resources.";
             const result_5 = document.getElementById("rec_eco_5");
-            result_5.innerText = "Continuar con las practicas de calidad e innovacion siguiendo las normas ISO 9001:2015 y ISO 56002:2019, que especifica los requisitos para un sistema de gestión de la calidad y valor agregado a traves de la innovación.";
+            result_5.innerText = "Continue with quality and innovation practices following the ISO 9001:2015 and ISO 56002:2019 standards, which specify the requirements for a quality management system and added value through innovation.";
             /* const ul = document.createElement('ul');
             const recomendaciones = ["Implementar prácticas de gestión ambiental que te permitan reducir tus costos operativos y aumentar tu eficiencia energética.","Innovar en el diseño y desarrollo de tus productos, ofreciendo soluciones creativas, funcionales y duraderas que satisfagan las necesidades y expectativas de tus clientes.","Diversificar tus canales de distribución y comunicación, aprovechando las ventajas del comercio electrónico y las redes sociales para llegar a nuevos mercados y fidelizar a tus consumidores.","Establecer alianzas estratégicas con otros actores del sector moda, como proveedores, competidores o instituciones públicas o privadas, que te permitan compartir conocimientos, experiencias y recursos.","Continuar con las practicas de calidad e innovacion siguiendo las normas ISO 9001:2015 y ISO 56002:2019, que especifica los requisitos para un sistema de gestión de la calidad y valor agregado a traves de la innovación."];
             for (let i = 0; i < recomendaciones.length; i++){
@@ -288,17 +288,17 @@
             eco_rec[0].appendChild(ul); */
 
         } else if (data.economical.FB4.membership_interp.label == 'good'){
-            eco_rec[0].innerText = "Has obtenido una calificación buena en el ámbito económico, lo que significa que has logrado generar beneficios económicos para tu empresa. Sin embargo, siempre hay margen de mejora y puedes seguir estas recomendaciones:"
+            eco_rec[0].innerText = "You have obtained a good score in the economic field, which means you have managed to generate economic benefits for your company. However, there's always room for improvement, and you can follow these recommendations:"
             const result_1 = document.getElementById("rec_eco_1");
-            result_1.innerText = "Diversificar tus canales de distribución y venta, apostando por plataformas digitales que te permitan llegar a más clientes potenciales y ofrecer una experiencia personalizada.";
+            result_1.innerText = "Diversify your distribution and sales channels, betting on digital platforms that allow you to reach more potential customers and offer a personalized experience.";
             const result_2 = document.getElementById("rec_eco_2");
-            result_2.innerText = "Fidelizar a tus clientes actuales, ofreciendo productos de calidad, con valor agregado y diferenciados, que reflejen tu identidad y filosofía sostenible.";
+            result_2.innerText = "Build loyalty with your current customers by offering quality products with added value and differentiation, reflecting your identity and sustainable philosophy.";
             const result_3 = document.getElementById("rec_eco_3");
-            result_3.innerText = "Mantener o aumentar tu competitividad en el mercado mediante la innovación y la diferenciación de tus productos o servicios.";
+            result_3.innerText = "Maintain or increase your competitiveness in the market through innovation and differentiation of your products or services.";
             const result_4 = document.getElementById("rec_eco_4");
-            result_4.innerText = "Incorporar criterios ambientales y sociales en tus decisiones de inversión y financiación. Esto implica evaluar los riesgos e impactos potenciales de tus actividades sobre el medio ambiente y las personas.";
+            result_4.innerText = "Incorporate environmental and social criteria into your investment and financing decisions. This means assessing the potential risks and impacts of your activities on the environment and people.";
             const result_5 = document.getElementById("rec_eco_5");
-            result_5.innerText = "Implementar un sistema de gestión económica que te permita medir y mejorar el impacto económico de tu empresa, siguiendo la norma ISO 9001:2015 sobre gestión de la calidad.";
+            result_5.innerText = "Implement an economic management system that allows you to measure and improve the economic impact of your company, following the ISO 9001:2015 standard on quality management.";
 
             /* const ul = document.createElement('ul');
             const recomendaciones = ["Diversificar tus canales de distribución y venta, apostando por plataformas digitales que te permitan llegar a más clientes potenciales y ofrecer una experiencia personalizada.","Fidelizar a tus clientes actuales, ofreciendo productos de calidad, con valor agregado y diferenciados, que reflejen tu identidad y filosofía sostenible.","Mantener o aumentar tu competitividad en el mercado mediante la innovación y la diferenciación de tus productos o servicios.","Incorporar criterios ambientales y sociales en tus decisiones de inversión y financiación. Esto implica evaluar los riesgos e impactos potenciales de tus actividades sobre el medio ambiente y las personas; así como buscar oportunidades para apoyar proyectos o iniciativas sostenibles.","Implementar un sistema de gestión económica que te permita medir y mejorar el impacto económico de tu empresa, como la norma ISO 9001:2015 sobre gestión de la calidad. Esta norma proporciona los requisitos para establecer un sistema que asegure la satisfacción del cliente y la mejora continua del desempeño empresarial."];
@@ -313,17 +313,17 @@
         /* AMBIENTAL */
         const env_rec = document.getElementsByClassName("reco_env");
         if (data.environmental.FB5.membership_interp.label == 'poor'){
-            env_rec[0].innerText = "Has obtenido una calificación mala en el ámbito ambiental, significa que debes tomar medidas urgentes para reducir tu impacto ecológico y evitar consecuencias negativas para tu negocio y el planeta. Algunas acciones que puedes tomar son:"
+            env_rec[0].innerText = "You have obtained a poor score in the environmental field, which means you need to take urgent measures to reduce your ecological impact and avoid negative consequences for your business and the planet. Some actions you can take are:"
             const result_1 = document.getElementById("rec_env_1");
-            result_1.innerText = "Evitar materiales sintéticos o del petróleo, contaminantes y no biodegradables. Prefiere materiales naturales o ecológicos como algodón, lana, cáñamo o bambú orgánicos, que usan y contaminan menos";
+            result_1.innerText = "Avoid synthetic or petroleum-based materials, which are polluting and non-biodegradable. Prefer natural or ecological materials like organic cotton, wool, hemp, or bamboo, which use and pollute less.";
             const result_2 = document.getElementById("rec_env_2");
-            result_2.innerText = "Incorporar el uso de material reciclado en tus productos, como poliéster reciclado de botellas plásticas, algodón reciclado de prendas usadas o fibras de residuos textiles. Así ahorras recursos y disminuyes residuos.";
+            result_2.innerText = "Incorporate the use of recycled materials in your products, such as polyester recycled from plastic bottles, cotton recycled from used garments, or fibers from textile waste. This way, you save resources and reduce waste.";
             const result_3 = document.getElementById("rec_env_3");
-            result_3.innerText = "Implementa medidas para reducir las emisiones de gases efecto invernadero (GEI) asociadas a tu actividad empresarial. Puedes aplicar la norma ISO 14064:2006 sobre cuantificación e informe de emisiones GEI.";
+            result_3.innerText = "Implement measures to reduce greenhouse gas (GHG) emissions associated with your business activity. You can apply the ISO 14064:2006 standard on quantification and reporting of GHG emissions.";
             const result_4 = document.getElementById("rec_env_4");
-            result_4.innerText = "Disminuye el consumo energético en tus procesos con sistemas de reutilización o recirculación de energía.  Puedes aplicar la norma ISO 50001:2018 sobre sistemas de gestión de la energía";
+            result_4.innerText = "Reduce energy consumption in your processes with energy reuse or recirculation systems. You can apply the ISO 50001:2018 standard on energy management systems.";
             const result_5 = document.getElementById("rec_env_5");
-            result_5.innerText = "Aplica las normas ISO 14001 y 14064. Así mejorarás tu gestión ambiental y tus emisiones de gases, logrando una mejor calificación ambiental y mostrando tu responsabilidad ecológica.";
+            result_5.innerText = "Apply the ISO 14001 and 14064 standards. By doing so, you'll improve your environmental management and your greenhouse gas emissions, achieving a better environmental rating and showcasing your ecological responsibility.";
             
             /* const ul = document.createElement('ul');
             const recomendaciones = ["Evitar el uso de materiales sintéticos o derivados del petróleo como el poliéster, el nylon o el acrílico, que son altamente contaminantes y no biodegradables. Prefiere el uso de materiales naturales o ecológicos como el algodón orgánico, la lana orgánica, el cáñamo o el bambú, que requieren menos recursos y tienen menor impacto ambiental"," Incorpora el uso de material reciclado en tus productos, como poliéster reciclado a partir de botellas plásticas, algodón reciclado a partir de prendas usadas o fibras recicladas a partir de residuos textiles. Esto te permite ahorrar recursos y reducir la generación de residuos.","Reduce el consumo de agua en tus procesos productivos mediante la implementación de sistemas de reutilización o recirculación del agua, la instalación de dispositivos ahorradores o la sustitución de técnicas que requieren mucha agua como el lavado con piedra o el teñido convencional por otras más eficientes como el lavado con ozono o el teñido digital.","Reduce el consumo de energía en tus procesos productivos mediante la optimización del uso de maquinaria y equipos, la instalación de sistemas de iluminación LED o la sustitución de fuentes de energía fósiles por fuentes renovables como la solar o la eólica.","Seguir las normas ISO 14001 e ISO 14064. Estas normas te ayudarán a mejorar tu gestión ambiental y a reducir tus emisiones de gases de efecto invernadero, lo que te permitirá tener una calificación ambiental más alta y demostrar tu compromiso con el planeta."];
@@ -335,17 +335,17 @@
             env_rec[0].appendChild(ul); */
         
         } else if (data.environmental.FB5.membership_interp.label == 'average'){
-            env_rec[0].innerText = " Has obtenido una calificación promedio en el ámbito ambiental, significa que estás haciendo un esfuerzo por reducir tu impacto ecológico, pero que aún puedes mejorar en algunos aspectos. Algunas recomendaciones son:"
+            env_rec[0].innerText = "You have obtained an average score in the environmental field, which means you are making an effort to reduce your ecological impact, but there are still areas where you can improve. Some recommendations are:"
             const result_1 = document.getElementById("rec_env_1");
-            result_1.innerText = "Optimizar el uso del agua y la energía en tus procesos productivos mediante la implementación de medidas de eficiencia y ahorro.";
+            result_1.innerText = "Optimize water and energy use in your production processes by implementing efficiency and savings measures.";
             const result_2 = document.getElementById("rec_env_2");
-            result_2.innerText = "Promover la economía circular y el reciclaje de residuos textiles mediante la participación en iniciativas como Fashion Revolution o The Circular Project.";
+            result_2.innerText = "Promote the circular economy and the recycling of textile waste by participating in initiatives such as Fashion Revolution or The Circular Project.";
             const result_3 = document.getElementById("rec_env_3");
-            result_3.innerText = "Medir tu huella de carbono y establecer objetivos de reducción de emisiones mediante la aplicación de la norma ISO 14064:2018 sobre gases de efecto invernadero.";
+            result_3.innerText = "Measure your carbon footprint and set emission reduction targets by applying the ISO 14064:2018 standard on greenhouse gases.";
             const result_4 = document.getElementById("rec_env_4");
-            result_4.innerText = "Participar en redes o plataformas de moda sostenible que te permitan compartir experiencias y buenas prácticas con otros actores del sector.";
+            result_4.innerText = "Join sustainable fashion networks or platforms that allow you to share experiences and best practices with other players in the sector.";
             const result_5 = document.getElementById("rec_env_5");
-            result_5.innerText = "Evaluar el ciclo de vida de tus productos, desde la extracción de materias primas hasta el fin de su uso, considerando los impactos ambientales en cada etapa y buscando reducirlos o compensarlos."
+            result_5.innerText = "Assess the life cycle of your products, from the extraction of raw materials to the end of their use, considering the environmental impacts at each stage and seeking to reduce or offset them."
 
             /* const ul = document.createElement('ul');
             const recomendaciones = ["Optimizar el uso del agua y la energía en tus procesos productivos mediante la implementación de medidas de eficiencia y ahorro.","Promover la economía circular y el reciclaje de residuos textiles mediante la participación en iniciativas como Fashion Revolution o The Circular Project.","Medir tu huella de carbono y establecer objetivos de reducción de emisiones mediante la aplicación de la norma ISO 14064:2018 sobre gases de efecto invernadero.","Participar en redes o plataformas de moda sostenible que te permitan compartir experiencias y buenas prácticas con otros actores del sector."];
@@ -357,17 +357,18 @@
             env_rec[0].appendChild(ul); */
 
         } else if (data.environmental.FB5.membership_interp.label == 'good'){
-            env_rec[0].innerText = "Has obtenido una calificación buena en el ámbito ambiental, significa que estás haciendo un buen uso de los recursos naturales y minimizando tu impacto ecológico. Sin embargo, siempre hay margen de mejora y puedes seguir estas recomendaciones:"
+            env_rec[0].innerText = "You have obtained a good score in the environmental field, which means you are making good use of natural resources and minimizing your ecological impact. However, there's always room for improvement, and you can follow these recommendations:"
             const result_1 = document.getElementById("rec_env_1");
-            result_1.innerText = "Mantener el uso de materiales orgánicos, reciclados o biodegradables para la fabricación de las prendas, prescindiendo del uso de fibras sintéticas como el poliéster o el nylon";
+            result_1.innerText = "Continue using organic, recycled, or biodegradable materials for garment manufacturing, avoiding the use of synthetic fibers such as polyester or nylon.";
             const result_2 = document.getElementById("rec_env_2");
-            result_2.innerText = "Continuar con las medidas de eficiencia energética y uso de energías renovables en los procesos productivos, adoptando el transporte y la distribución mediante modelos locales o circulares.";
-            const result_3 = document.getElementById("rec_env_3");
-            result_3.innerText = "Continuar con las prácticas de gestión ambiental según la norma ISO 14001:2015, que define los requisitos para gestionar los aspectos ambientales relevantes y optimizar el desempeño ambiental.";
-            const result_4 = document.getElementById("rec_env_4");
-            result_4.innerText = "Fomentar y continuar con la reutilización y el reciclaje de tus productos mediante sistemas de devolución, intercambio o donación";
-            const result_5 = document.getElementById("rec_env_5");
-            result_5.innerText = "Obtener alguna certificación o sello que acredite el cumplimiento de criterios ambientales como EcoCert, Oeko-Tex o Cradle to Cradle."
+            result_2.innerText = "Continue with the energy efficiency measures and use of renewable energies in production processes, adopting transportation and distribution through local or circular models.";
+	    const result_3 = document.getElementById("rec_env_3");
+	    result_3.innerText = "Keep up with the environmental management practices according to the ISO 14001:2015 standard, which defines the requirements to manage relevant environmental aspects and optimize environmental performance.";
+	    const result_4 = document.getElementById("rec_env_4");
+	    result_4.innerText = "Promote and continue with the reuse and recycling of your products through return, exchange, or donation systems.";
+	    const result_5 = document.getElementById("rec_env_5");
+	    result_5.innerText = "Obtain a certification or seal that certifies compliance with environmental criteria such as EcoCert, Oeko-Tex, or Cradle to Cradle.";
+
             
             /* const ul = document.createElement('ul');
             const recomendaciones = ["Utilizar materiales orgánicos, reciclados o biodegradables para la fabricación de las prendas, evitando el uso de fibras sintéticas derivadas del petróleo como el poliéster o el nylon", "Continuar con las medidas de eficiencia energética y uso de energías renovables en los procesos productivos, adoptando el transporte y la distribución mediante modelos locales o circulares.", "Continuar con las prácticas de gestión ambiental siguiendo la norma ISO 14001:2015, que establece los requisitos para implementar un sistema que permita controlar los aspectos ambientales significativos y mejorar el desempeño ambiental","Fomentar y continuar con la reutilización y el reciclaje de tus productos mediante sistemas de devolución, intercambio o donación ","Obtener alguna certificación o sello que acredite el cumplimiento de criterios ambientales como EcoCert, Oeko-Tex o Cradle to Cradle."];
@@ -382,18 +383,19 @@
         /* SOCIAL */
 
         const soc_rec = document.getElementsByClassName("reco_soc");
-        if (data.social.FB2.membership_interp.label == 'poor'){
-            soc_rec[0].innerText = "Has obtenido una calificación mala en el ámbito social, lo que significa que debes mejorar las condiciones laborales y sociales de tus trabajadores y proveedores. Algunas acciones que puedes tomar son:"
-            const result_1 = document.getElementById("rec_soc_1");
-            result_1.innerText = "Realizar un estudio de mercado para conocer las necesidades, preferencias y opiniones de tus clientes actuales y potenciales, así como los puntos fuertes y débiles de tu competencia.";
-            const result_2 = document.getElementById("rec_soc_2");
-            result_2.innerText = "Establecer una política y una estrategia de responsabilidad social que defina los principios, los objetivos, las acciones, los recursos y los indicadores para mejorar tu desempeño social y ambiental.";
-            const result_3 = document.getElementById("rec_soc_3");
-            result_3.innerText = "Implementar y evaluar la política y la estrategia de responsabilidad social, involucrando empleados, clientes, proveedores, comunidades y otros actores sociales en su ejecución, comunicando resultados y beneficios obtenidos.";
-            const result_4 = document.getElementById("rec_soc_4");
-            result_4.innerText = "Aplicar normas internacionales como la ISO 26000, que proporciona orientación sobre cómo integrar aspectos sociales en las organizaciones, o el Estándar SA8000, que establece requisitos para el desempeño social de las empresas.";
-            const result_5 = document.getElementById("rec_soc_5");
-            result_5.innerText = "Apoyar a comunidades locales donde operas, contribuyendo al desarrollo social y cultural. Puedes aplicar la norma ISO 37101:2016 sobre sistemas de gestión para el desarrollo sostenible de las comunidades."
+const soc_rec = document.getElementsByClassName("reco_soc");
+if (data.social.FB2.membership_interp.label == 'poor'){
+    soc_rec[0].innerText = "You have received a poor score in the social field, which means that you need to improve the labor and social conditions of your workers and suppliers. Some actions you can take are:"
+    const result_1 = document.getElementById("rec_soc_1");
+    result_1.innerText = "Conduct a market study to understand the needs, preferences, and opinions of your current and potential customers, as well as the strengths and weaknesses of your competitors.";
+    const result_2 = document.getElementById("rec_soc_2");
+    result_2.innerText = "Establish a social responsibility policy and strategy that defines the principles, objectives, actions, resources, and indicators to improve your social and environmental performance.";
+    const result_3 = document.getElementById("rec_soc_3");
+    result_3.innerText = "Implement and evaluate the social responsibility policy and strategy, involving employees, customers, suppliers, communities, and other social actors in its execution, communicating results and benefits obtained.";
+    const result_4 = document.getElementById("rec_soc_4");
+    result_4.innerText = "Apply international standards such as ISO 26000, which provides guidance on integrating social aspects into organizations, or the SA8000 Standard, which establishes requirements for companies' social performance.";
+    const result_5 = document.getElementById("rec_soc_5");
+    result_5.innerText = "Support local communities where you operate, contributing to social and cultural development. You can apply the ISO 37101:2016 standard on management systems for the sustainable development of communities."
 
             /* const ul = document.createElement('ul');
             const recomendaciones = ["Realizar un estudio de mercado para conocer las necesidades, preferencias y opiniones de tus clientes actuales y potenciales, así como los puntos fuertes y débiles de tu competencia.","Establecer una política y una estrategia de responsabilidad social que defina los principios, los objetivos, las acciones, los recursos y los indicadores para mejorar tu desempeño social y ambiental.","Implementar y evaluar la política y la estrategia de responsabilidad social, involucrando a tus empleados, clientes, proveedores, comunidades y otros actores sociales en su ejecución y seguimiento, y comunicando los resultados y beneficios obtenidos.","Aplicar normas internacionales como la ISO 26000, que proporciona orientación sobre cómo integrar aspectos sociales en las organizaciones, o el Estándar SA8000, que establece requisitos para el desempeño social de las empresas."];
@@ -405,17 +407,17 @@
             soc_rec[0].appendChild(ul); */
         
         } else if (data.social.FB2.membership_interp.label == 'average'){
-            soc_rec[0].innerText = " Has obtenido una calificación promedio en el ámbito social, lo que significa que puedes mejorar el bienestar de las personas y las comunidades que están detrás de la industria de la moda, tanto en el origen como en el destino de las prendas. Algunas recomendaciones son:"
-            const result_1 = document.getElementById("rec_soc_1");
-            result_1.innerText = "Mantener y mejorar las condiciones laborales de los trabajadores que participan en la cadena de producción de la moda, ofreciendo salarios justos, horarios flexibles, capacitación continua y un ambiente seguro y saludable.";
-            const result_2 = document.getElementById("rec_soc_2");
-            result_2.innerText = "Fomentar una relación transparente y honesta con los clientes, informando sobre el origen, la calidad y el impacto ambiental y social de los productos que ofreces.";
-            const result_3 = document.getElementById("rec_soc_3");
-            result_3.innerText = "Involucrar a las comunidades locales en el desarrollo sostenible de la industria de la moda, apoyando iniciativas sociales, culturales y educativas que contribuyan al progreso colectivo.";
-            const result_4 = document.getElementById("rec_soc_4");
-            result_4.innerText = "Mejorar la satisfacción del empleado, del consumidor y de la comunidad a través de las normas ISO 45001:2018 y ISO 37101:2016 sobre seguridad, responsabilidad social y desarrollo sostenible.";
-            const result_5 = document.getElementById("rec_soc_5");
-            result_5.innerText = "Fomentar la diversidad e inclusión en tu empresa, promoviendo la igualdad de oportunidades y la no discriminación por género, edad, origen o discapacidad.";
+	    soc_rec[0].innerText = "You have received an average score in the social field, which means you can improve the well-being of people and communities behind the fashion industry, both at the origin and at the destination of the garments. Some recommendations are:";
+	    const result_1 = document.getElementById("rec_soc_1");
+	    result_1.innerText = "Maintain and improve the working conditions of workers involved in the fashion production chain, offering fair wages, flexible schedules, ongoing training, and a safe and healthy environment.";
+	    const result_2 = document.getElementById("rec_soc_2");
+	    result_2.innerText = "Promote a transparent and honest relationship with customers, informing them about the origin, quality, and environmental and social impact of the products you offer.";
+	    const result_3 = document.getElementById("rec_soc_3");
+	    result_3.innerText = "Involve local communities in the sustainable development of the fashion industry, supporting social, cultural, and educational initiatives that contribute to collective progress.";
+	    const result_4 = document.getElementById("rec_soc_4");
+	    result_4.innerText = "Improve employee, consumer, and community satisfaction through the ISO 45001:2018 and ISO 37101:2016 standards on safety, social responsibility, and sustainable development.";
+	    const result_5 = document.getElementById("rec_soc_5");
+	    result_5.innerText = "Promote diversity and inclusion in your company, advocating for equal opportunities and non-discrimination based on gender, age, origin, or disability.";
             /* const ul = document.createElement('ul');
             const recomendaciones = ["Mejorar las condiciones laborales de los trabajadores que participan en la cadena de producción de la moda, ofreciendo salarios justos, horarios flexibles, capacitación continua y un ambiente seguro y saludable.","Fomentar una relación transparente y honesta con los clientes, informando sobre el origen, la calidad y el impacto ambiental y social de los productos que ofreces.","Involucrar a las comunidades locales en el desarrollo sostenible de la industria de la moda, apoyando iniciativas sociales, culturales y educativas que contribuyan al progreso colectivo.","Mejorar la satisfacción del empleado, del consumidor y de la comunidad a través de las normas ISO 45001:2018 sobre sistemas de gestión de la seguridad y salud en el trabajo, ISO 26000:2010 sobre responsabilidad social, y ISO 37101:2016 sobre sistemas de gestión para el desarrollo sostenible en las comunidades."];
             for (let i = 0; i < recomendaciones.length; i++){
@@ -425,18 +427,18 @@
             }
             soc_rec[0].appendChild(ul); */
         } else if (data.social.FB2.membership_interp.label == 'good'){
-            soc_rec[0].innerText = "Has obtenido una calificación buena en el ámbito social, lo que significa que estás cumpliendo con los aspectos relacionados con la satisfacción del empleado, del consumidor y de la comunidad. Sin embargo, siempre hay margen de mejora y puedes seguir estas recomendaciones:"
-            const result_1 = document.getElementById("rec_soc_1");
-            result_1.innerText = "Implementar un código de conducta ética que garantice el respeto a los derechos humanos, laborales y sociales de todos los involucrados en la cadena de valor de tu empresa.";
-            const result_2 = document.getElementById("rec_soc_2");
-            result_2.innerText = "Aplicar la norma ISO 26000:2010 sobre responsabilidad social, que te orienta sobre cómo integrar los principios y prácticas sociales en tu estrategia y operaciones.";
-            const result_3 = document.getElementById("rec_soc_3");
-            result_3.innerText = "Fomentar la participación y el diálogo con tus grupos de interés (empleados, clientes, proveedores, comunidad) para identificar sus expectativas y necesidades y responder a ellas.";
-            const result_4 = document.getElementById("rec_soc_4");
-            result_4.innerText = "Promover la transparencia y la trazabilidad de tus procesos productivos y comunica a tus consumidores el origen, la calidad y el impacto de tus productos.";
-            const result_5 = document.getElementById("rec_soc_5");
-            result_5.innerText = "Continuar y apoyar iniciativas sociales que contribuyan al desarrollo sostenible de las comunidades donde operas o donde se producen tus materias primas.";
-            
+	    soc_rec[0].innerText = "You have received a good rating in the social domain, which means you are meeting aspects related to employee, consumer, and community satisfaction. However, there's always room for improvement and you can follow these recommendations:";
+	    const result_1 = document.getElementById("rec_soc_1");
+	    result_1.innerText = "Implement an ethical code of conduct that ensures respect for human, labor, and social rights of everyone involved in your company's value chain.";
+	    const result_2 = document.getElementById("rec_soc_2");
+	    result_2.innerText = "Apply the ISO 26000:2010 standard on social responsibility, guiding you on how to integrate social principles and practices into your strategy and operations.";
+	    const result_3 = document.getElementById("rec_soc_3");
+	    result_3.innerText = "Encourage participation and dialogue with your stakeholders (employees, customers, suppliers, community) to identify their expectations and needs and respond to them.";
+	    const result_4 = document.getElementById("rec_soc_4");
+	    result_4.innerText = "Promote transparency and traceability of your production processes and communicate to your consumers the origin, quality, and impact of your products.";
+	    const result_5 = document.getElementById("rec_soc_5");
+	    result_5.innerText = "Continue and support social initiatives that contribute to the sustainable development of the communities where you operate or where your raw materials are produced.";
+	            
             /* const ul = document.createElement('ul');
             const recomendaciones = ["Implementa un código de conducta ética que garantice el respeto a los derechos humanos, laborales y sociales de todos los involucrados en la cadena de valor de tu empresa.","Aplica la norma ISO 26000:2010 sobre responsabilidad social, que te orienta sobre cómo integrar los principios y prácticas sociales en tu estrategia y operaciones.","Fomenta la participación y el diálogo con tus grupos de interés (empleados, clientes, proveedores, comunidad) para identificar sus expectativas y necesidades y responder a ellas.","Promueve la transparencia y la trazabilidad de tus procesos productivos y comunica a tus consumidores el origen, la calidad y el impacto de tus productos.","Continua y apoya iniciativas sociales que contribuyan al desarrollo sostenible de las comunidades donde operas o donde se producen tus materias primas."];
             for (let i = 0; i < recomendaciones.length; i++){
