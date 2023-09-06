@@ -234,13 +234,13 @@
                             'good':'bueno'}
         
             document.getElementById('supplementary').innerHTML += `<span>Your sustainability in the Economic dimension is:
-                                                                <span style="color:${color[eco]}">${translate[eco]}.</span> ${reco[eco]} </span> <br>`
+                                                                <span style="color:${color[eco]}">${eco}.</span></span> <br>`
             document.getElementById('supplementary').innerHTML += `<span>Your sustainability in the Environmental dimension is:
-                                                                <span style="color:${color[env]}">${translate[env]}.</span> ${reco[env]} </span> <br>`
+                                                                <span style="color:${color[env]}">${env}.</span> </span> <br>`
             document.getElementById('supplementary').innerHTML += `<span>Your sustainability in the Social dimension is:
-                                                                <span style="color:${color[soc]}">${translate[soc]}</span> ${reco[soc]} </span>`
+                                                                <span style="color:${color[soc]}">${soc}</span> </span>`
             document.getElementById('supplementary').innerHTML += `<span id="overall">Overall your sustainability is: 
-                                                                <span style="color:${color[overall]}">${translate[overall]}</span> </span>`
+                                                                <span style="color:${color[overall]}">${overall}</span> </span>`
             
         /* Seccion de recomendaciones tomadas de chat gpt */
         /* ECONOMICO */
@@ -382,7 +382,7 @@
 
         /* SOCIAL */
 
-        const soc_rec = document.getElementsByClassName("reco_soc");
+
 const soc_rec = document.getElementsByClassName("reco_soc");
 if (data.social.FB2.membership_interp.label == 'poor'){
     soc_rec[0].innerText = "You have received a poor score in the social field, which means that you need to improve the labor and social conditions of your workers and suppliers. Some actions you can take are:"
