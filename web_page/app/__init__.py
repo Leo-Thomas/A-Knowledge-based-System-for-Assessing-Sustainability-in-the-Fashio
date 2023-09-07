@@ -49,7 +49,7 @@ class ExpertSystemForm(FlaskForm):
                             validators=validators)
     community_satisfaction = RadioField("Community Satisfaction:",choices = choices,
                             validators=validators)
-    submit = SubmitField('Send')
+    submit = SubmitField('Submit')
 
 
 @app.route("/", methods = ['GET'])
