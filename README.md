@@ -42,8 +42,7 @@ You can see a demo [here](http://mariscoboliviano.pythonanywhere.com/) to test o
 
 ### Installation
 
-pip install git+https://github.com/Leo-Thomas/A-Knowledge-based-System-for-Assessing-Sustainability-for-SMEs-in-the-Fashion-Industry.git
-
+pip install git+https://github.com/Leo-Thomas/SustainMeter.git
 <!-- CONTRIBUTING -->
 ## Contributing
 
