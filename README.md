@@ -85,6 +85,6 @@ Leo Ramos - [LinkedIn](https://www.linkedin.com/in/leo-thomas-ramos/) - leo.ramo
 <br>
 <br>
 
-Project link: [https://github.com/Leo-Thomas/A-Knowledge-based-System-for-Assessing-Sustainability-for-SMEs-in-the-Fashion-Industry.git](https://github.com/Leo-Thomas/A-Knowledge-based-System-for-Assessing-Sustainability-for-SMEs-in-the-Fashion-Industry.git)
+Project link: [https://github.com/Leo-Thomas/SustainMeter.git](https://github.com/Leo-Thomas/SustainMeter.git)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
