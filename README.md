@@ -75,7 +75,7 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
 
 <!-- CITAITON -->
 ## Citation
-
+```
 @article{RAMOS2024101611,
 title = {SustainMeter: A knowledge-based system for assessing sustainability of SMEs in the fashion industry},
 journal = {SoftwareX},
@@ -85,7 +85,7 @@ year = {2024},
 issn = {2352-7110},
 doi = {https://doi.org/10.1016/j.softx.2023.101611},
 author = {Leo Ramos and Mike Bermeo and Andrés Quelal and Anthony Crespo and Gabriela Cajamarca and Francklin Rivas-Echeverría}}
-
+```
 <!-- CONTACT -->
 ## Contact
 
