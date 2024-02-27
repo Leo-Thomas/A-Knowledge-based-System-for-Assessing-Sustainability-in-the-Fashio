@@ -31,8 +31,6 @@ You can see a demo [here](http://mariscoboliviano.pythonanywhere.com/) to test o
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 ### Built With
 * [Python](https://www.python.org/)
 * [Scikit-Fuzzy](https://pypi.org/project/scikit-fuzzy/)
