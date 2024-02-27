@@ -89,13 +89,14 @@ author = {Leo Ramos and Mike Bermeo and Andrés Quelal and Anthony Crespo and Ga
 <!-- CONTACT -->
 ## Contact
 
+Leo Ramos - [LinkedIn](https://www.linkedin.com/in/leo-thomas-ramos/) - leo.ramos@kauel.com
+
 Mike Bermeo - [LinkedIn](https://www.linkedin.com/in/mike-bermeo-1a8869128/) - mike.bermeo@yachaytech.edu.ec
 
 Andrés Quelal - [LinkedIn](https://www.linkedin.com/in/andresq99/) - andres.quelal@yachaytech.edu.ec
 
 Anthony Crespo - [LinkedIn](https://www.linkedin.com/in/anthony-crespo20/) - brian.crespo@yachaytech.edu.ec
 
-Leo Ramos - [LinkedIn](https://www.linkedin.com/in/leo-thomas-ramos/) - leo.ramos@yachaytech.edu.ec
 
 <br>
 <br>
