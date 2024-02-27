@@ -21,6 +21,10 @@ In this work, we propose a knowledge-based system to evaluate the sustainability
 
 This project was developed by Mike Bermeo, Andrés Quelal, Anthony Crespo, and Leo Ramos students at [Yachay Tech University](https://www.yachaytech.edu.ec/en/).
 
+### Paper
+
+https://www.sciencedirect.com/science/article/pii/S2352711023003072
+
 ### Demo
 
 You can see a demo [here](http://mariscoboliviano.pythonanywhere.com/) to test our system.
@@ -69,6 +73,18 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+<!-- CITAITON -->
+## Citation
+
+@article{RAMOS2024101611,
+title = {SustainMeter: A knowledge-based system for assessing sustainability of SMEs in the fashion industry},
+journal = {SoftwareX},
+volume = {25},
+pages = {101611},
+year = {2024},
+issn = {2352-7110},
+doi = {https://doi.org/10.1016/j.softx.2023.101611},
+author = {Leo Ramos and Mike Bermeo and Andrés Quelal and Anthony Crespo and Gabriela Cajamarca and Francklin Rivas-Echeverría}}
 
 <!-- CONTACT -->
 ## Contact
